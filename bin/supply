@@ -10,7 +10,7 @@
 # - BUILD_DIR is the folder that gets turned into the droplet/container
 # 
 ###
-echo "Running Supply Script of Run With Node.js Buildpack"
+echo "Running Supply Script of Build with NPM Buildpack"
 
 export NODE_VERSION="12.5.0"
 
@@ -27,13 +27,3 @@ if [ ! -f $CACHE_DIR/node.tgz ]; then
   curl https://nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz > $CACHE_DIR/node.tgz
   tar -xzf $CACHE_DIR/node.tgz -C $CACHE_DIR/
 fi
-
-echo "CACHE" 
-ls -la $CACHE_DIR/
-
-
-cp -r $CACHE_DIR/node-v$NODE_VERSION-linux-x64 $DEPS_DIR/node
-
-
-echo "DEPS" 
-ls -la $DEPS_DIR/node/bin
