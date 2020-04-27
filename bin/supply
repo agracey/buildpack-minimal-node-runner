@@ -25,4 +25,4 @@ if [ ! -f $CACHE_DIR/node.tgz ]; then
 fi
 
 
-cp -r $CACHE_DIR/node-v$NODE_VERSION-linux-x64 $DEPS_DIR/node
+cp $CACHE_DIR/node-v$NODE_VERSION-linux-x64/bin/node $BUILD_DIR/node
